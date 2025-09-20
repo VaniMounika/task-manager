@@ -1,0 +1,182 @@
+/* Center everything vertically and horizontally */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 25px 20px;
+  background-color: #2c2c2c;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #00ff7f;
+  margin-bottom: 25px;
+}
+
+/* Input + button wrapper */
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* Task input */
+input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Add button */
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00ff7f;
+  color: #1e1e1e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #00cc66;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+li {
+  background-color: #3a3a3a;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+li span {
+  cursor: pointer;
+  color: #ff4c4c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  button {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+}
+
+/* Wrapper for input + buttons */
+.input-wrapper {
+  display: flex;
+  flex-direction: column; /* default stacked on small screens */
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* Buttons container */
+.button-group {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px; /* spacing between buttons */
+}
+
+/* Task input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Add button */
+.button-group button {
+  flex: 1; /* evenly space buttons */
+  padding: 12px 0;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Add button styling */
+.button-group button:nth-child(1) {
+  background-color: #00ff7f;
+  color: #1e1e1e;
+}
+
+.button-group button:nth-child(1):hover {
+  background-color: #00cc66;
+}
+
+/* Clear button styling */
+.clear-btn {
+  background-color: #ff4c4c;
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background-color: #cc3a3a;
+}
+
+/* Responsive: side-by-side on larger screens */
+@media (min-width: 400px) {
+  .input-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button-group {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 10px;
+  }
+
+  input[type="text"] {
+    flex: 2; /* input wider than buttons */
+  }
+
+  .button-group button {
+    flex: 1;
+  }
+}
